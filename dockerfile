@@ -9,7 +9,7 @@ COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Passo 4: Copiar o restante do código fonte do microsserviço
-COPY app.py app.py
+COPY . .
 
 # Passo 5: Expor a porta lógica do container
 EXPOSE 5000
