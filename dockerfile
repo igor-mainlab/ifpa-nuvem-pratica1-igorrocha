@@ -15,4 +15,4 @@ COPY . .
 EXPOSE 5000
 
 # Passo 6: Comando padrão iniciando a API via Gunicorn WSGI Server em nível de produção
-CMD ["gunicorn", "--workers", "1", "--threads", "4", "--worker-class", "gthread", "--bind", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]
